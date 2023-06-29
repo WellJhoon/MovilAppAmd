@@ -10,7 +10,7 @@ class ToolboxPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/Toolbox.png',
+            'lib/assets/Toolbox.jpg',
             width: 200,
             height: 200,
           ),

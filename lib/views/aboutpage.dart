@@ -12,22 +12,22 @@ class AboutPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('assets/isael.jpg'),
+              backgroundImage: AssetImage('lib/assets/yo.jpg'),
               radius: 80,
             ),
             SizedBox(height: 20),
             Text(
-              'Isael Diroche',
+              'jhon',
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 10),
             Text(
-              'Correo electrónico: isaeldiroche@gmail.com',
+              'Correo electrónico: jhon437699@gmail.com',
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 10),
             Text(
-              'Teléfono: (809) 678-1819',
+              'Teléfono: (829) 396-4502',
               style: TextStyle(fontSize: 16),
             ),
           ],

@@ -27,12 +27,14 @@ class _NewsPageState extends State<NewsPage> {
   }
 
   Future<void> _fetchNoticias() async {
-    final response = await http.get(Uri.parse('https://blog.mozilla.org/wp-json/wp/v2/posts?_embed&per_page=3'));
+    final response = await http.get(Uri.parse(
+        'https://blogmaverick.com/wp-json/wp/v2/posts?_embed&per_page=3'));
     if (response.statusCode == 200) {
       final noticiasJson = json.decode(response.body) as List<dynamic>;
       final nuevasNoticias = noticiasJson.map((json) {
         final titulo = _decodeHtmlEntities(json['title']['rendered'] as String);
-        final resumen = _decodeHtmlEntities(json['excerpt']['rendered'] as String);
+        final resumen =
+            _decodeHtmlEntities(json['excerpt']['rendered'] as String);
         final enlace = json['link'] as String;
         return Noticia(titulo: titulo, resumen: resumen, enlace: enlace);
       }).toList();
@@ -66,7 +68,8 @@ class _NewsPageState extends State<NewsPage> {
         itemBuilder: (context, index) {
           final noticia = _noticias[index];
           return ListTile(
-            leading: Image.network('https://blog.mozilla.org/wp-content/blogs.dir/278/files/2022/03/moz_blog_header_pattern_1920x1080_03-1280x720.jpg'),
+            leading: Image.network(
+                'https://blogmaverick.com/wp-content/themes/blogmaverick2/images/header-branding-2x.png'),
             title: Text(noticia.titulo),
             subtitle: Text(noticia.resumen),
             onTap: () {

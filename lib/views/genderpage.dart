@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:tarea6/main.dart';
 import './toolboxpage.dart';
+
 class GenderPage extends StatefulWidget {
   @override
   _GenderPageState createState() => _GenderPageState();
@@ -12,7 +13,8 @@ class _GenderPageState extends State<GenderPage> {
   String gender = '';
 
   Future<void> fetchGender(String name) async {
-    final response = await http.get(Uri.parse('https://api.genderize.io/?name=$name'));
+    final response =
+        await http.get(Uri.parse('https://api.genderize.io/?name=$name'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);

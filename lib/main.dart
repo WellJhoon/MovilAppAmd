@@ -77,13 +77,16 @@ class _NavigationPageState extends State<NavigationPage> {
       body: currentScreen,
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
-          color: Colors.black, // Establece el color negro para el BottomNavigationBar
+          color: Colors
+              .black, // Establece el color negro para el BottomNavigationBar
         ),
         child: BottomNavigationBar(
           currentIndex: currentIndex,
           onTap: onTabTapped,
-          selectedItemColor: const Color.fromARGB(255, 0, 0, 0), // Establece el color blanco para los íconos y etiquetas seleccionados
-          unselectedItemColor: const Color.fromARGB(255, 235, 2, 2), // Establece el color gris para los íconos y etiquetas no seleccionados
+          selectedItemColor: const Color.fromARGB(255, 0, 0,
+              0), // Establece el color blanco para los íconos y etiquetas seleccionados
+          unselectedItemColor: const Color.fromARGB(255, 235, 2,
+              2), // Establece el color gris para los íconos y etiquetas no seleccionados
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
